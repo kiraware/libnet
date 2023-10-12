@@ -78,7 +78,7 @@ libnet_t *l, libnet_ptag_t ptag)
 
     if (chaddr)
     {
-        const size_t n = sizeof (dhcp_hdr.dhcp_chaddr);
+        size_t n = sizeof (dhcp_hdr.dhcp_chaddr);
         if (hlen < n)
             n = hlen;
         memcpy(dhcp_hdr.dhcp_chaddr, chaddr, n);
