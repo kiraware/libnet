@@ -2646,7 +2646,7 @@ libnet_write_raw_ipv6(libnet_t *l, const uint8_t *packet, uint32_t size);
  */
 LIBNET_API
 int
-libnet_write_link(const libnet_t *l, const uint8_t *packet, uint32_t size);
+libnet_write_link(libnet_t *l, const uint8_t *packet, uint32_t size);
 
 /*
  * [Internal] 

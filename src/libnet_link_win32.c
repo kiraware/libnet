@@ -199,7 +199,7 @@ libnet_close_link_interface(const libnet_t *l)
 }
 
 int
-libnet_write_link(const libnet_t *l, const uint8_t *data, uint32_t size)
+libnet_write_link(libnet_t *l, const uint8_t *data, uint32_t size)
 {
     PACKET pkt;
     DWORD  BytesTransfered = -1;
