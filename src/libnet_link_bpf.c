@@ -61,7 +61,7 @@
 int
 libnet_bpf_open(char *err_buf)
 {
-    int i;
+    int i, fd;
     char device[] = "/dev/bpf000";
 
     /*
@@ -71,7 +71,7 @@ libnet_bpf_open(char *err_buf)
     {
         snprintf(device, sizeof(device), "/dev/bpf%d", i);
 
-        const int fd = open(device, O_RDWR);
+        fd = open(device, O_RDWR);
         if (fd == -1 && errno == EBUSY)
         {
             /*
