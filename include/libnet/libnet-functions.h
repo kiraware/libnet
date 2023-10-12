@@ -1037,8 +1037,9 @@ libnet_ptag_t libnet_build_icmpv6_ndp_nsol(uint8_t type, uint8_t code,
  */
 LIBNET_API
 libnet_ptag_t libnet_build_icmpv6_ndp_nadv(uint8_t type, uint8_t code,
-        uint16_t sum, uint32_t flags, struct libnet_in6_addr target, uint8_t
-        *payload, const uint32_t payload_s, libnet_t* l, libnet_ptag_t ptag);
+        uint16_t sum, uint32_t flags, struct libnet_in6_addr target,
+        const uint8_t *payload, uint32_t payload_s, libnet_t* l,
+        libnet_ptag_t ptag);
 
 /**
  * Builds ICMPv6 NDP options.
